@@ -1,0 +1,82 @@
+
+<form novalidate
+[formGroup]="form">
+<h3>Parameters</h3>
+<div class="row">
+	<div class="col-md-3">
+		<label for="restrictions-home"> Restrictions at home</label>
+		<select name="restrictions-home" id="restrictions-home"
+		formControlName="contactsAtHome"
+		class="form-control"
+		>
+		  <option value="none">None</option>
+		  <option value="short">Short</option>
+		  <option value="medium">Medium</option>
+		  <option value="long">Long</option>
+		</select>
+	</div>
+	<div class="col-md-3">
+	<label for="restrictions-school"> Restrictions at school</label>
+	<select name="restrictions-school" id="restrictions-school"
+	formControlName="contactsAtSchool"
+	class="form-control"
+	>
+	  <option value="none">None</option>
+	  <option value="short">Short</option>
+	  <option value="medium">Medium</option>
+	  <option value="long">Long</option>
+	  <option value="long1">Long - 20 days</option>
+	  <option value="long2">Long - 40 days</option>
+	</select>
+	</div>
+	<div class="col-md-3">
+	<label for="restrictions-work"> Restrictions at work</label>
+	<select name="restrictions-work" id="restrictions-work"
+	formControlName="contactsAtWork"
+	class="form-control"
+	>
+	  <option value="none">None</option>
+	  <option value="short">Short</option>
+	  <option value="medium">Medium</option>
+	  <option value="long">Long</option>
+	  <option value="long">Long - 20 days</option>
+	  <option value="long">Long - 40 days</option>
+	</select>
+	</div>
+	<div class="col-md-3">
+	<label for="restrictions-transport"> Restrictions at transport</label>
+	<select name="restrictions-tranposrt" id="restrictions-transport"
+	formControlName="contactsAtTransport"
+	class="form-control"
+	>
+	  <option value="none">None</option>
+	  <option value="short">Short</option>
+	  <option value="medium">Medium</option>
+	  <option value="long">Long</option>
+	</select>
+	</div>
+	<div class="col-md-3">
+	<label for="infectivty-mode"> Mode of infectivity by age</label>
+	<select name="infectivty-mode" id="infectivty-mode"
+	formControlName="typeOfEvent"
+	class="form-control"
+	>
+	  <option value="normal">Normal</option>
+	  <option value="soft">Soft</option>
+	  <option value="agressive">Agressive</option>
+	  <option value="agrresive-child">Agressive in children</option>
+	</select>
+</div>
+	
+    <!-- <div class="col-md-3">
+		<input type="text"
+		formControlName="typeOfEvent"
+		class="form-control"
+		placeholder="Type of event"
+		/>
+	</div>		 -->
+	<div class="col-md-3 col-sm-3">
+		<button class="btn btn-primary"
+		(click)="search(form.value)">Add data!</button>
+	</div>
+</div>

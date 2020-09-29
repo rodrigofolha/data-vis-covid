@@ -1,0 +1,25 @@
+/* style range */
+input[type=range] {
+    width: 20%;
+    max-width: 20%;
+    margin-left: 0;
+}
+/* style datalist */
+input[type=range] + datalist {
+    display: block;
+    margin-top: -15px;
+    margin-left: 12px;
+}
+input[type=range] + datalist option {
+    display: inline-block;
+    width: calc((15% - 0px) / (var(--list-length) - 1));
+    text-align: center;
+}
+input[type=range] + datalist option:first-child {
+    width: calc((15% - 0px) / ((var(--list-length) - 1) * 2) + 6px);
+    text-align: left;
+}
+input[type=range] + datalist option:last-child {
+    width: calc((15% - 0px) / ((var(--list-length) - 1) * 2) + 6px);
+    text-align: right;
+}

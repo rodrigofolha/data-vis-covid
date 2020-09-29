@@ -1,0 +1,45 @@
+<app-parameters (groupFilters)="parameters = $event"></app-parameters>
+<br/>
+<div class="container-left">
+<app-r-infection [groupFilters]="parameters" city="santiago" class="chart"></app-r-infection>
+<app-infected-by-age [groupFilters]="parameters" city="santiago" class="chart"></app-infected-by-age>
+<app-infected-stacked-local [groupFilters]="parameters" city="santiago" class="chart"></app-infected-stacked-local>
+
+<app-infector-by-age [groupFilters]="parameters" city="santiago" class="chart"></app-infector-by-age>
+
+<app-infected-accumulated [groupFilters]="parameters" city="santiago" class="chart"></app-infected-accumulated>
+<app-pie [groupFilters]="parameters" city="santiago" class="chart"></app-pie>
+
+
+<!-- <div class="container-rigth">
+<app-r-infection [groupFilters]="parameters" city="macapa" class="chart"></app-r-infection>
+<app-infected-stacked-local [groupFilters]="parameters" city="macapa" class="chart"></app-infected-stacked-local>
+
+<app-infected-by-age [groupFilters]="parameters" city="macapa" class="chart"></app-infected-by-age>
+<app-infector-by-age [groupFilters]="parameters" city="macapa" class="chart"></app-infector-by-age>
+
+<app-infected-accumulated [groupFilters]="parameters" city="macapa" class="chart"></app-infected-accumulated>
+<app-pie [groupFilters]="parameters" city="macapa" class="chart"></app-pie>
+</div> -->
+
+    <app-r-infection [groupFilters]="parameters" city="boa_vista" class="chart"></app-r-infection>
+    <app-infected-by-age [groupFilters]="parameters" city="boa_vista" class="chart"></app-infected-by-age>
+    <app-infected-stacked-local [groupFilters]="parameters" city="boa_vista" class="chart"></app-infected-stacked-local>
+    
+    <app-infector-by-age [groupFilters]="parameters" city="boa_vista" class="chart"></app-infector-by-age>
+    
+    <app-infected-accumulated [groupFilters]="parameters" city="boa_vista" class="chart"></app-infected-accumulated>
+    <app-pie [groupFilters]="parameters" city="boa_vista" class="chart"></app-pie>
+    </div>
+
+
+   <!-- <div class="container-rigth">
+        <app-r-infection [groupFilters]="parameters" city="recife" class="chart"></app-r-infection>
+        <app-infected-stacked-local [groupFilters]="parameters" city="recife" class="chart"></app-infected-stacked-local>
+        
+        <app-infected-by-age [groupFilters]="parameters" city="recife" class="chart"></app-infected-by-age>
+        <app-infector-by-age [groupFilters]="parameters" city="recife" class="chart"></app-infector-by-age>
+        
+        <app-infected-accumulated [groupFilters]="parameters" city="recife" class="chart"></app-infected-accumulated>
+        <app-pie [groupFilters]="parameters" city="recife" class="chart"></app-pie>
+        </div> -->
