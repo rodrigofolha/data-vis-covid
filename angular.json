@@ -119,6 +119,10 @@
               "devServerTarget": "data-vis:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
