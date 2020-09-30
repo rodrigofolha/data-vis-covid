@@ -23,7 +23,7 @@ export class InfectedAccumulatedComponent implements OnInit {
   ngOnInit (): void {
     let data = fetch('/assets/' + this.city + '.txt')
       .then(response => response.text())
-      .then (population => d3.dsv(';',"/assets/covid-"+this.city+"-none-none-none-none-normal.csv").then(data => this.createGraph(data, population)));
+      .then (population => d3.dsv(';',"./assets/covid-"+this.city+"-none-none-none-none-normal.csv").then(data => this.createGraph(data, population)));
  
   }
 
@@ -44,7 +44,7 @@ export class InfectedAccumulatedComponent implements OnInit {
     if (this.groupFilters && this.groupFilters['typeOfEvent'])
       mode_infectivity = this.groupFilters['typeOfEvent'];
       if (this.chart) {
-        let data : any = d3.dsv(';',"/assets/covid-"+this.city+"-"+school+"-"+work+"-"+home+"-"+transport+"-"+mode_infectivity+".csv")
+        let data : any = d3.dsv(';',"./assets/covid-"+this.city+"-"+school+"-"+work+"-"+home+"-"+transport+"-"+mode_infectivity+".csv")
         .then(data => this.updateGraph(data,  "s: "+school+" - w: "+work+" - h: "+home+" - t: "+transport+" - mi: "+mode_infectivity));
       }
 

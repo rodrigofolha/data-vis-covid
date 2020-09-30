@@ -23,7 +23,7 @@ export class PieComponent implements OnInit {
 
   ngOnInit (): void {
     this.population = [3113,3996,5046,4714,4309,3354,2131,1433,638,124];
-    let data : any = d3.dsv(';',"/assets/covid-"+this.city+"-none-none-none-none-normal.csv").then(data => this.createGraph(data));
+    let data : any = d3.dsv(';',"./assets/covid-"+this.city+"-none-none-none-none-normal.csv").then(data => this.createGraph(data));
  
   }
 
@@ -44,7 +44,7 @@ export class PieComponent implements OnInit {
     if (this.groupFilters && this.groupFilters['typeOfEvent'])
       mode_infectivity = this.groupFilters['typeOfEvent'];
       if (this.chart) {
-        let data : any = d3.dsv(';',"/assets/covid-"+this.city+"-"+school+"-"+work+"-"+home+"-"+transport+"-"+mode_infectivity+".csv")
+        let data : any = d3.dsv(';',"./assets/covid-"+this.city+"-"+school+"-"+work+"-"+home+"-"+transport+"-"+mode_infectivity+".csv")
         .then(data => this.updateGraph(data,  "s: "+school+" - w: "+work+" - h: "+home+" - t: "+transport+" - mi: "+mode_infectivity));
       }
 
