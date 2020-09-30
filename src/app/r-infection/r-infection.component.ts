@@ -24,7 +24,7 @@ export class RInfectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit (): void {
-    let data = fetch('/assets/' + this.city + '.txt')
+    let data = fetch('./assets/' + this.city + '.txt')
       .then(response => response.text())
       .then (population => d3.dsv(';',"./assets/covid-"+this.city+"-none-none-none-none-normal.csv").then(data => this.createGraph(data, population)));
  
